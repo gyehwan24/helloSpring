@@ -15,7 +15,7 @@ public class HelloController {
         model.addAttribute("data", "spring!");
         return "hello";
     }
-    //MVC 방식 (Model View Controller), 템플릿 엔진 이용용
+    //MVC 방식 (Model View Controller), 템플릿 엔진 이용
    @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model){
         model.addAttribute("name",name);
@@ -32,12 +32,13 @@ public class HelloController {
     @GetMapping("hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name){
-        Hello hello = new Hello();
+        Hello hello = new Hello();  //Hello 객체 생성
         hello.setName(name);
         return hello;
     }
     static class Hello{
         private String name;
+        private int age;
         public String getName(){
             return name;
         }
@@ -45,5 +46,4 @@ public class HelloController {
             this.name= name;
         }
     }
-
 }
