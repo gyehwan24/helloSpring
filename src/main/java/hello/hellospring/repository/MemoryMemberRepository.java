@@ -4,7 +4,7 @@ import hello.hellospring.domain.Member;
 
 import java.util.*;
 
-//MemberRepository 인터페이스의 상속을 받아 Override하여 구현.
+//MemberRepository 인터페이스의 상속을 받아 Override하여 자세히 구현.
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
@@ -32,6 +32,7 @@ public class MemoryMemberRepository implements MemberRepository {
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
+
     //store를 비워주는 메소드
     public void clearStore(){
         store.clear();
