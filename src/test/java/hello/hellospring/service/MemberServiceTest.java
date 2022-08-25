@@ -16,6 +16,7 @@ class MemberServiceTest {
 
     MemberService memberService ;
     MemoryMemberRepository memberRepository ;
+    //의존성 주입(DI, Dependency Injection)
     @BeforeEach
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
