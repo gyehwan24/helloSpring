@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 //MemberRepository 인터페이스의 상속을 받아 Override하여 자세히 구현.
-@Repository
+
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();

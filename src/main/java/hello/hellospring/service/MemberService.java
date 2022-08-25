@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 //서비스는 핵심 비즈니스 로직 구현 (회원가입, 중복검사, 회원조회)
-@Service
+
 public class MemberService {
     private final MemberRepository memberRepository;
-    @Autowired
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
