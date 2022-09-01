@@ -3,13 +3,16 @@ package hello.hellospring.repository;
 import hello.hellospring.domain.Member;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 
 public class JpaMemberRepository implements MemberRepository {
 
     //jpa를 쓰려면 EntityManager를 주입받아야한다.
+    @PersistenceContext
     private final EntityManager em;
+
     public JpaMemberRepository(EntityManager em) {
         this.em = em;
     }
